@@ -2,4 +2,11 @@
 <h2><%= @article.title %> </h2>
 <h3><%= @article.created_at %> </h3>
 <p><%= @article.body %> </p>
+<p><%= @article.status %> </p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
 <%= link_to "index", articles_path %>
